@@ -35,6 +35,7 @@ import java.util.List;
                 hBox.getChildren().addAll(txtChat);
 
 
+
                 HBox ButtonArea = new HBox();
                 ButtonArea.setSpacing(10);
                 ButtonArea.setPadding(new Insets(5));
@@ -66,8 +67,7 @@ import java.util.List;
             if (event.getSource() == btnEnviar) {
                 listMessages.add(txtMensaje.getText());
                 for (int i = 0; i < listMessages.size(); i++) {
-                    txtChat.setText(String.valueOf(listMessages));
-                    System.out.println(txtMensaje.getText());
+                    txtChat.setText(listMessages.get(i));
                     txtMensaje.setText("");
 
                 }
